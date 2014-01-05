@@ -1,0 +1,3 @@
+It occurred to me once that it might be neat to have a CLI tool which would parse a text file for strings like "http://", find the longest valid URL (eg "see http://www.google.com " can be easily turned into the correct URL just by starting at "http" and eating until you reach " ", which is not good in a URL without having been escaped as "%20"). So I did a little work on such a tool. It didn't work well.
+
+My ultimate solution was to realize that I only cared about the URLs in my Markdown files, and to sit down and write a Pandoc script to parse the Markdown and extract URLs. See <http://www.gwern.net/haskell/link-extractor.hs>.
